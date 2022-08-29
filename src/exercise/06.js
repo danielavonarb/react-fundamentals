@@ -24,12 +24,18 @@ function UsernameForm({onSubmitUsername}) {
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="usernameInput">Username:</label>
-        <input id="usernameInput" type="text" onChange={handleChange} />
+        <input
+          id="usernameInput"
+          type="text"
+          onChange={handleChange}
+          value={username}
+        />
       </div>
-      <div style={{color: 'red'}}>{error}</div>
+      {/* <div style={{color: 'red'}}>{error}</div>
       <button disabled={Boolean(error)} type="submit">
         Submit
-      </button>
+      </button> */}
+      <button type="submit">Submit</button>
     </form>
   )
 }
